@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import About from './components/About';
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
       <>
         <Navbar title = 'My title' />
         <div className="container">
-          <TextForm heading = 'My Heading' />          
+          {/* <TextForm heading = 'My Heading' />    */}
         </div>
+        <About />
       </>
 
       /* <div className="blank"></div>
