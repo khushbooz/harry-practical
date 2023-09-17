@@ -1,16 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react'
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import About from './components/About';
 
 function App() {
+  const [oldMode, setOldMode] = useState('dark');
+  const [newModes, setNewModes] = useState({
+    mymode: 'light',
+    title: 'My titles'
+  });
+  const toggleMode = (event) => {
+    if (newModes === 'light'){
+      setNewModes('dark');
+      document.body.style.backgroundColor = 'yellow'
+    } else {
+      setNewModes('light');
+      document.body.style.backgroundColor = 'green'
+    }
+  }
   return (
     // <div className="App">
       <>
-        <Navbar title = 'My title' />
+        <Navbar newModes = {newModes} oldMode = {oldMode} toggleMode = {toggleMode} />
         <div className="container">
-          {/* <TextForm heading = 'My Heading' />    */}
+          <TextForm heading = 'My Heading' newModes = {newModes} />   
         </div>
         <About />
       </>
