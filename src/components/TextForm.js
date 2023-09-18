@@ -10,6 +10,7 @@ export default function TextForm(props) {
     let newTxt = text.toUpperCase();
     setText(newTxt);
     console.log(newTxt);
+    props.showAlert('my toUpperCase message', 'success');
   }
   const handleSpeachClick = () => {
     speak({ text: text })

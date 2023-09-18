@@ -8,7 +8,6 @@ export default function About() {
     border: '2px solid white'
   });
   
-
   const toggleMyStyle = () => {
     if (newStyle.color === 'red'){
       setNewStyle({color: 'green',
